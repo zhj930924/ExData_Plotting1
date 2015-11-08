@@ -12,7 +12,7 @@ power_data$DateTime <- as.character(paste(power_data$Date,power_data$Time))
 power_data$DateTime <- strptime(power_data$DateTime, format = "%Y-%m-%d %H:%M:%S")
 
 #Create a Histogram with specified labels
-
+par(mar=c(4,4,2,1), oma=c(0,0,2,0), bg = "transparent")
 hist(power_data$Global_active_power, col = "red", main = "Global Active Power",
      xlab = "Global Active Power (kilowatts)")
 

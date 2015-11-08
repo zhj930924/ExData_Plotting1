@@ -12,9 +12,9 @@ power_data$DateTime <- as.character(paste(power_data$Date,power_data$Time))
 power_data$DateTime <- strptime(power_data$DateTime, format = "%Y-%m-%d %H:%M:%S")
 
 #Create a plot with specified requirements
-png("plot3.png", width=480, height=480)
+png("plot4.png", width=480, height=480)
 
-par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
+par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0), bg = "transparent")
 
 #Plot1
 plot(power_data$DateTime,power_data$Global_active_power, xlab = "", 

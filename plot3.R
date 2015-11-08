@@ -14,6 +14,8 @@ power_data$DateTime <- strptime(power_data$DateTime, format = "%Y-%m-%d %H:%M:%S
 #Create a plot with specified requirements
 png("plot3.png", width=480, height=480)
 
+par(mar=c(4,4,2,1), oma=c(0,0,2,0), bg = "transparent")
+
 plot(power_data$DateTime,power_data$Sub_metering_1, xlab = "", 
      ylab = "Energy sub metering", type = "l")
 lines(power_data$DateTime,power_data$Sub_metering_2, col = "red")
